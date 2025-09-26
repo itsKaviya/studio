@@ -16,7 +16,7 @@ export async function suggestReasonAction(studentId: string): Promise<{success: 
       totalXp: student.totalXp,
       questCompletionRate: student.questCompletionRate,
       badgesEarned: student.badgesEarned,
-      lastAktivit_ti: student.lastLogin.toDateString(), // Matches the typo in the provided flow
+      lastActivity: student.lastLogin.toDateString(),
       masterySkills: student.masterySkills,
     };
 

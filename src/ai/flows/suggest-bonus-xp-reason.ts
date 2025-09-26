@@ -21,7 +21,7 @@ const SuggestBonusXpReasonInputSchema = z.object({
     .number()
     .describe('The quest completion rate of the student (0 to 1).'),
   badgesEarned: z.number().describe('The number of badges earned by the student.'),
-  last активности: z.string().describe('Last activity'),
+  lastActivity: z.string().describe('Last activity'),
   masterySkills: z
     .array(z.string())
     .describe('A list of skills the student has mastered.'),
@@ -59,7 +59,7 @@ Quest Completion Rate: {{{questCompletionRate}}}
 Badges Earned: {{{badgesEarned}}}
 Mastery Skills: {{#each masterySkills}}{{{this}}}{{#unless @last}}, {{/unless}}{{/each}}
 
-Suggest a reason for awarding bonus XP that is personalized and specific to the student's achievements. Please also consider the last login time: {{{last активности}}}. Focus on positive reinforcement and encouragement.
+Suggest a reason for awarding bonus XP that is personalized and specific to the student's achievements. Please also consider the last login time: {{{lastActivity}}}. Focus on positive reinforcement and encouragement.
 `,
 });
 
